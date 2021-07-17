@@ -30,3 +30,5 @@ if ("serviceWorker" in navigator) {
 - Open a connection to the IndexedDB by name and version (use 1 if does not exist)
 - add `onupgradeneeded` handler which is called soon after the connection to the IndexedDB is open
 - all requests will either result in a success or error and therefore we will add 2 handlers `onsuccess` and `onerror` to the request
+- within the `onupgradeneeded` handler function we will create an object store within the indexedDB
+- within the `onsuccess` you check if the browser is online and if it is then ensure you update the remote DB with the contents of your IndexedDB before performing any DB operations
