@@ -23,6 +23,6 @@ app.use(routes);
 // Connect to MongoDB and start server
 db.once("open", () => {
   app.listen(PORT, () => {
-    console.log(`App running on http://localhost:${PORT}!`);
+    console.log(`App running on http://localhost:${PORT}`);
   });
 });

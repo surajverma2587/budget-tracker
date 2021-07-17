@@ -1,3 +1,16 @@
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", async () => {
+    try {
+      const register = await navigator.serviceWorker.register(
+        "/service-worker.js"
+      );
+      console.log("Service worker registered.", register);
+    } catch (error) {
+      console.log(error.message);
+    }
+  });
+}
+
 let transactions = [];
 let myChart;
 
